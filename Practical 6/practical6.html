@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        }
+    .myForm{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100%;
+        gap: 10px;
+    }
+    .btn{
+        text-align: center;
+        width:auto;
+        grid-column: span 2;
+    }
+    .mybtn{
+        background-color: #4CAF50; /* Green */
+        border: 1px solid white;
+        border-radius: 5px;
+        color: white;
+        padding: 2% 5%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    
+    .mybtnhov:hover { background-color: #5baf75;}
+    
+</style>
+<body>
+    <div style="border: 1px solid black; border-radius: 5%; padding: 2%;">
+        <h1>Enter Details of your Pet</h1>
+        <form class="myForm">
+            <label for="">Name:</label>
+            <input type="" name="" id="name">
+
+            <label for="">Age:</label>
+            <input type="number" name="" id="age">
+
+            <label for="">Weight:</label>
+            <input type="number" name="" id="weight">
+
+            <label for="">Type:</label>
+            <input type="text" name="" id="type">
+
+            <label for="">Likes:</label>
+            <input type="text" name="" id="like">
+
+            <div class="btn">
+                <button class = "mybtn mybtnhov" onclick="convertData()">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+        function convertData(){
+
+            let name =document.querySelector("#name").value;
+            let age =document.querySelector("#age").value;
+            let weight =document.querySelector("#weight").value;
+            let type =document.querySelector("#type").value;
+            let likes =document.querySelector("#like").value;
+
+        var Myobject = {
+                Name: name ,
+                Age: age,
+                Weight: weight,
+                Type: type,
+                Likes: likes
+            };
+
+            console.log(Myobject)
+         
+            var myjson = JSON.stringify(Myobject);
+
+            console.log("-----------------------------------");
+            console.log("Object into json")
+            console.log("-----------------------------------");
+
+            console.log(myjson)
+        }
+       
+    
+    </script>
+</body>
+
+</html>

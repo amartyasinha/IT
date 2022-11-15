@@ -1,0 +1,6 @@
+[
+    {"name":"Jerry","age":"18","type":"Mouse","weight":"2","likes":"Teasing Tom"},
+    {"name":"Tom","age":"20","type":"Cat","weight":"20","likes":"Chasing Jerry"},
+    {"name":"Spike","age":"28","type":"Dog","weight":"40","likes":"Protecting Bone"},
+    {"name":"Tyke","age":"5","type":"Dog","weight":"10","likes":"Barking"}
+]
